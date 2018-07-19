@@ -3,22 +3,23 @@
     <head>
         <title>Human Body Model</title>
         <meta charset="utf-8">
-        <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
-        <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
         <link type="text/css" rel="stylesheet" href="css/styles.css"/>
         <link type="text/css" rel="stylesheet" href="css/styles.css"/>
         <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
-        <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+        <script src="https://unpkg.com/bootstrap-vue@2.0.0-rc.11/dist/bootstrap-vue.js"></script>
     </head>
     <body>
         <div id="human-body-app" class="container">
-            {{measurements}}
-            <div v-for="body_section in measurements.length" class="row">
-                <h1>{{body_section.name}} Lengths</h1>
-                <length-input v-for="body_part in body_section.body_parts" body_part="body_part"></length-input>
+            <div v-for="body_section in measurements.lengths" class="row">
+                <div class="col-sm-12">
+                    <h1>{{body_section.name}} Lengths</h1>
+                </div>
+                <length-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
             </div>
         </div>
     </body>
-    <script src="js/vue-app.js"></script>
     <script src="js/input-components.js"></script>
+    <script src="js/vue-app.js"></script>
 </html>
