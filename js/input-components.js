@@ -5,23 +5,34 @@ Vue.component(
             'body_part'
         ],
         template:
-        '<div class="col-sm-6">'+
-            '<label for="">Length for {{body_part.name}}</label>'+
-            '<input type="number" v-model="body_part.value">'+        
-        '</div>'
+        '<div class="col-sm-12 form-group">'+
+            '<label for="">Length for {{body_part.name}} </label>'+
+            '<div class="input-group">' +
+                '<input type="number" v-model="body_part.value" @change="log">'+ 
+            '</div>' +    
+        '</div>',
+        methods: {
+            log: function () {
+                console.log(this.body_part);
+                console.log(this.body_part.name);
+                console.log(this.body_part.value);
+            }
+        }
     }
 )
 
 Vue.component(
-    'width-input',
+    'circumference-input',
     {
         props:[
             'body_part'
         ],
         template:
-        '<div class="col-sm-6">'+
-            '<label for="">Width for {{body_part.name}}</label>'+
-            '<input type="number" v-model="body_part.value">'+        
+        '<div class="col-sm-12">'+
+            '<label for="">Circumference for {{body_part.name}} </label>'+
+            '<div class="input-group">' +
+                '<input type="number" v-model="body_part.value">'+    
+            '</div>' +       
         '</div>'
     }
 )
