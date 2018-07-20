@@ -12,11 +12,23 @@
     </head>
     <body>
         <div id="human-body-app" class="container">
-            <div v-for="body_section in measurements.lengths" class="row">
-                <div class="col-sm-12">
-                    <h1>{{body_section.name}} Lengths</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div v-for="body_section in measurements.lengths" class="row">
+                        <div class="col-sm-12">
+                            <h1>{{body_section.name}} Lengths</h1>
+                        </div>
+                        <length-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
+                    </div>
                 </div>
-                <length-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
+                <div class="col-sm-6">
+                    <div v-for="body_section in measurements.circumference" class="row">
+                        <div class="col-sm-12">
+                            <h1>{{body_section.name}} Circumference</h1>
+                        </div>
+                        <circumference-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
