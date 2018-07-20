@@ -9,19 +9,19 @@ var app = new Vue({
                         body_parts: {
                             shoulder_to_bicep_tri: {
                                 value: 0,
-                                name: ""
+                                name: "Shoulder to Bicep"
                             },
                             bicep_tri_to_elbow: {
                                 value: 0,
-                                name: ""
+                                name: "Bicep to Tri"
                             },
                             elbow_to_forearm: {
                                 value: 0,
-                                name: ""
+                                name: "Elbow to Forearm"
                             },
                             forearm_to_wrist: {
                                 value: 0,
-                                name: ""
+                                name: "Forearm to Wrist"
                             }
                         }
                     },
@@ -30,19 +30,19 @@ var app = new Vue({
                         body_parts: {
                             shoulder_to_bicep_tri: {
                                 value: 0,
-                                name: ""
+                                name: "Shoulder to Bicep"
                             },
                             bicep_tri_to_elbow: {
                                 value: 0,
-                                name: ""
+                                name: "Bicep to Tri"
                             },
                             elbow_to_forearm: {
                                 value: 0,
-                                name: ""
+                                name: "Elbow to Forearm"
                             },
                             forearm_to_wrist: {
                                 value: 0,
-                                name: ""
+                                name: "Forearm to Wrist"
                             }
                         }
                     },
@@ -51,19 +51,19 @@ var app = new Vue({
                         body_parts: {
                             hip_to_waist: {
                                 value: 0,
-                                name: ""
+                                name: "Hip to Waist"
                             },
                             waist_to_chest: {
                                 value: 0,
-                                name: ""
+                                name: "Waist to Chest"
                             },
                             chest_to_collar: {
                                 value: 0,
-                                name: ""
+                                name: "Chest to Collar"
                             },
                             collar_to_shoulder: {
                                 value: 0,
-                                name: ""
+                                name: "Collar to Shoulder"
                             }
                         }
                     },
@@ -72,19 +72,19 @@ var app = new Vue({
                         body_parts: {
                             hip_to_inner_thigh: {
                                 value: 0,
-                                name: ""
+                                name: "Hip to Inner Thigh"
                             },
                             inner_thigh_to_knee: {
                                 value: 0,
-                                name: ""
+                                name: "Inner Thigh to Knee"
                             },
                             knee_to_calf: {
                                 value: 0,
-                                name: ""
+                                name: "Knee to Calf"
                             },
                             calf_to_achilles: {
                                 value: 0,
-                                name: ""
+                                name: "Calf to Achilles"
                             }
                         }
                     },
@@ -93,19 +93,19 @@ var app = new Vue({
                         body_parts: {
                             hip_to_inner_thigh: {
                                 value: 0,
-                                name: ""
+                                name: "Hip to Inner Thigh"
                             },
                             inner_thigh_to_knee: {
                                 value: 0,
-                                name: ""
+                                name: "Inner Thigh to Knee"
                             },
                             knee_to_calf: {
                                 value: 0,
-                                name: ""
+                                name: "Knee to Calf"
                             },
                             calf_to_achilles: {
                                 value: 0,
-                                name: ""
+                                name: "Calf to Achilles"
                             }
                         }
                     }
@@ -117,15 +117,15 @@ var app = new Vue({
                         body_parts: {
                             bicep_tri: {
                                 value: 0,
-                                name: ""
+                                name: "Bicep and Tri"
                             },
                             elbow: {
                                 value: 0,
-                                name: ""
+                                name: "Elbow"
                             },
                             forearm: {
                                 value: 0,
-                                name: ""
+                                name: "Forearm"
                             }
                         }
                     },
@@ -134,15 +134,15 @@ var app = new Vue({
                         body_parts: {
                             bicep_tri: {
                                 value: 0,
-                                name: ""
+                                name: "Bicep and Tri"
                             },
                             elbow: {
                                 value: 0,
-                                name: ""
+                                name: "Elbow"
                             },
                             forearm: {
                                 value: 0,
-                                name: ""
+                                name: "Forearm"
                             }
                         }
                     },
@@ -151,15 +151,15 @@ var app = new Vue({
                         body_parts: {
                             hip: {
                                 value: 0,
-                                name: ""
+                                name: "Hips"
                             },
                             waist: {
                                 value: 0,
-                                name: ""
+                                name: "Waist"
                             },
                             chest: {
                                 value: 0,
-                                name: ""
+                                name: "Chest"
                             }
                         }
                     },
@@ -168,19 +168,19 @@ var app = new Vue({
                         body_parts: {
                             inner_thigh: {
                                 value: 0,
-                                name: ""
+                                name: "Inner Thigh"
                             },
                             knee: {
                                 value: 0,
-                                name: ""
+                                name: "Knee"
                             },
                             calf: {
                                 value: 0,
-                                name: ""
+                                name: "Calf"
                             },
                             achilles: {
                                 value: 0,
-                                name: ""
+                                name: "Achilles"
                             }
                         }
                     },
@@ -189,19 +189,19 @@ var app = new Vue({
                         body_parts: {
                             inner_thigh: {
                                 value: 0,
-                                name: ""
+                                name: "Inner Thigh"
                             },
                             knee: {
                                 value: 0,
-                                name: ""
+                                name: "Knee"
                             },
                             calf: {
                                 value: 0,
-                                name: ""
+                                name: "Calf"
                             },
                             achilles: {
                                 value: 0,
-                                name: ""
+                                name: "Achilles"
                             }
                         }
                     }
