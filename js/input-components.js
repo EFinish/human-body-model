@@ -5,7 +5,7 @@ Vue.component(
             'body_part'
         ],
         template:
-        '<div class="col-sm-12 form-group">'+
+        '<div class="col-sm-6 form-group">'+
             '<label for="">Length for {{body_part.name}} </label>'+
             '<div class="input-group">' +
                 '<input type="number" v-model="body_part.value" @change="log">'+ 
@@ -28,7 +28,7 @@ Vue.component(
             'body_part'
         ],
         template:
-        '<div class="col-sm-12">'+
+        '<div class="col-sm-6">'+
             '<label for="">Circumference for {{body_part.name}} </label>'+
             '<div class="input-group">' +
                 '<input type="number" v-model="body_part.value">'+    
