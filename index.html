@@ -14,19 +14,19 @@
     <body>
         <div class="container">
             <div class="row">
-            <div class="col-sm-12">
-                <h1 role="banner">Human Body Modal</h1>
+                <div class="col-sm-12" align="center">
+                    <h1 role="banner">Human Body Modal</h1>
+                </div>
+                <div class="col-sm-12" id="human-body-model-renderer-container" align="center">
+                    
+                </div>
             </div>
-            <div class="col-sm-12" id="human-body-model-renderer-container" align="center">
-                
-            </div>
-        </div>
         </div>
         <div id="human-body-app" class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <div v-for="body_section in measurements.lengths" class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 form-group">
                             <h1>{{body_section.name}} Lengths</h1>
                         </div>
                         <length-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div v-for="body_section in measurements.circumference" class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 form-group">
                             <h1>{{body_section.name}} Circumference</h1>
                         </div>
                         <circumference-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
