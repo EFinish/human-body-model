@@ -27,8 +27,9 @@ var humanShape = new THREE.Shape();
 //define x and y for shape creation
 var x = 0, y = 0;
 
-humanShape.moveTo( x + 0, y + 20 );
-humanShape.bezierCurveTo( x + 20, y + 20, x + 4, y, x, y );
+//https://threejs.org/docs/#api/extras/core/Path.bezierCurveTo
+humanShape.moveTo(x + 0, y + 20);
+humanShape.bezierCurveTo(x+5, y+5, x+20, y, x, y);
 // humanShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
 // humanShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
 // humanShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
@@ -53,7 +54,7 @@ var animate = function () {
     requestAnimationFrame( animate );
 
     // humanMesh.rotation.x += 0.01;
-    humanMesh.rotation.y += 0.01;
+    // humanMesh.rotation.y += 0.01;
 
     renderer.render(scene, camera);
 };
