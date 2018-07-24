@@ -27,13 +27,13 @@ var humanShape = new THREE.Shape();
 //define x and y for shape creation
 var x = 0, y = 0;
 
-humanShape.moveTo( x + 5, y + 5 );
-humanShape.bezierCurveTo( x + 5, y + 5, x + 4, y, x, y );
-humanShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
-humanShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
-humanShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
-humanShape.bezierCurveTo( x + 16, y + 7, x + 16, y, x + 10, y );
-humanShape.bezierCurveTo( x + 7, y, x + 5, y + 5, x + 5, y + 5 );
+humanShape.moveTo( x + 0, y + 20 );
+humanShape.bezierCurveTo( x + 20, y + 20, x + 4, y, x, y );
+// humanShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
+// humanShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
+// humanShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
+// humanShape.bezierCurveTo( x + 16, y + 7, x + 16, y, x + 10, y );
+// humanShape.bezierCurveTo( x + 7, y, x + 5, y + 5, x + 5, y + 5 );
 
 //initialize geometry object
 var geometry = new THREE.ShapeGeometry(humanShape);
@@ -48,10 +48,11 @@ var humanMesh = new THREE.Mesh(geometry, material);
 scene.add(humanMesh);
 
 camera.position.z = 50;
+camera.position.y = 20;
 var animate = function () {
     requestAnimationFrame( animate );
 
-    humanMesh.rotation.x += 0.01;
+    // humanMesh.rotation.x += 0.01;
     humanMesh.rotation.y += 0.01;
 
     renderer.render(scene, camera);
