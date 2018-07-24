@@ -21,20 +21,39 @@ renderer.setSize(
 //append renderer to element we want the 3d model contained to
 containerElement.appendChild(renderer.domElement);
 
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+//create humanshape to eventaully be put into geometry object
+var humanShape = new THREE.Shape();
 
-camera.position.z = 5;
+//define x and y for shape creation
+var x = 0, y = 0;
 
+humanShape.moveTo( x + 5, y + 5 );
+humanShape.bezierCurveTo( x + 5, y + 5, x + 4, y, x, y );
+humanShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
+humanShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
+humanShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
+humanShape.bezierCurveTo( x + 16, y + 7, x + 16, y, x + 10, y );
+humanShape.bezierCurveTo( x + 7, y, x + 5, y + 5, x + 5, y + 5 );
+
+//initialize geometry object
+var geometry = new THREE.ShapeGeometry(humanShape);
+
+//initialize material object
+var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+
+//create mesh object by adding the two together
+var humanMesh = new THREE.Mesh(geometry, material);
+
+//add mesh to scene
+scene.add(humanMesh);
+
+camera.position.z = 50;
 var animate = function () {
     requestAnimationFrame( animate );
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    humanMesh.rotation.x += 0.01;
+    humanMesh.rotation.y += 0.01;
 
-    renderer.render( scene, camera );
+    renderer.render(scene, camera);
 };
-
 animate();
