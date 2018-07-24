@@ -1,17 +1,25 @@
 //element to contain canvas
 var containerElement = document.getElementById("human-body-model-renderer-container");
-var canvasHeight = 1000;
-var canvasWidth = containerElement.offsetWidth;
 
+//make it nice and square :p
+var canvasWidth = containerElement.offsetWidth - 200;
+var canvasHeight = canvasWidth;
+
+//initialize scene object
 var scene = new THREE.Scene();
+
+//initlialize camera object
 var camera = new THREE.PerspectiveCamera( 75, canvasWidth/canvasHeight, 0.1, canvasHeight );
 
+//initialize renderer object
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(
     canvasWidth, 
     canvasHeight 
 );
-document.body.appendChild( renderer.domElement );
+
+//append renderer to element we want the 3d model contained to
+containerElement.appendChild(renderer.domElement);
 
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
