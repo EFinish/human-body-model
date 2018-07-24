@@ -12,6 +12,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
     </head>
     <body>
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-12">
+                <h1 role="banner">Human Body Modal</h1>
+            </div>
+            <div class="col-sm-12" id="human-body-model-renderer-container" align="center">
+                
+            </div>
+        </div>
+        </div>
         <div id="human-body-app" class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -29,14 +39,6 @@
                         </div>
                         <circumference-input v-for="body_part in body_section.body_parts" :body_part="body_part"></length-input>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1>Human Body Modal</h1>
-                </div>
-                <div class="col-sm-12" id="human-body-model-renderer-container">
-                    
                 </div>
             </div>
         </div>
